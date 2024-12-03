@@ -48,6 +48,7 @@ import org.postgresql.util.PSQLWarning;
 import org.postgresql.util.ServerErrorMessage;
 
 import org.checkerframework.checker.nullness.qual.Nullable;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.lang.ref.PhantomReference;
@@ -82,6 +83,8 @@ import java.util.logging.Logger;
 public class QueryExecutorImpl extends QueryExecutorBase {
 
   private static final Logger LOGGER = Logger.getLogger(QueryExecutorImpl.class.getName());
+
+  private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(QueryExecutorImpl.class);
 
   private static final Field[] NO_FIELDS = new Field[0];
 
